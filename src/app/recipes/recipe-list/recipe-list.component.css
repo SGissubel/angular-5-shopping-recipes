@@ -1,0 +1,8 @@
+.recipe-det_pull-left {
+  float: left;
+}
+
+.img_pull-right {
+  float: right;
+  margin-left: 3em;
+}
