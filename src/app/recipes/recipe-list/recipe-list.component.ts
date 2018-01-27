@@ -18,7 +18,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   addNewRecipe() {
-  	console.log(this.recipes);
+  	
   }
 
 }

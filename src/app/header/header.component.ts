@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'app-header',
@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
 	isOpen: boolean = false;
+  @Output() viewChange = new EventEmitter<string>();
+
+  changeView(view: string) {
+    this.viewChange.emit(view);
+  }
 
 	dropdown() {
 		this.isOpen = !this.isOpen;
