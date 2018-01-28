@@ -9,7 +9,6 @@ export class AppComponent {
   curView: string = 'recipe';
 
   changeView(view) {
-     console.log(this.curView);
     this.curView = view;
   }
 }

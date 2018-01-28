@@ -1,3 +1,8 @@
+.navCont {
+  background: #3c3c3c;
+  margin-bottom: 2em;
+}
+
 .navbar-nav {
   flex-direction: inherit;
 }
