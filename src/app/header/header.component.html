@@ -10,14 +10,18 @@
 				<li><a href="#" (click)="changeView('shopping-list')">Shopping List</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li>
-					<div  class="dropdown">
-						<a (click)="dropdown()" class="dropdown-toggle" data-toggle="dropdown" href="#">Manage <span class="caret"></span></a>
+				<li class="dropdown" appDropdown>
+					<!-- <div class="dropdown"> -->
+						<a 
+							class="dropdown-toggle"
+							role="button" 
+							href="#">Manage 
+							<span class="caret"></span></a>
 						<ul [ngStyle]="{display : isOpen ? 'block' : 'none'}" class="dropdown-menu" role="menu">
 							<li><a href="#">Save Data</a></li>
 							<li><a href="#">Fetch Data</a></li>
 						</ul>
-					</div>
+					<!-- </div> -->
 				</li>
 			</ul>
 		</div>

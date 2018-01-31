@@ -18,3 +18,7 @@
 .dropdown-menu li {
   padding: 0 1em;
 }
+
+.open ul {
+  display: block !important;
+}

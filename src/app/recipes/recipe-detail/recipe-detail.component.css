@@ -1,3 +1,11 @@
 .recipeDetailImage img {
   width: 235px;
 }
+
+.open ul {
+  display: block !important;
+}
+
+.dropdown-menu li {
+  padding: 0 1em;
+}
