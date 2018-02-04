@@ -2,6 +2,10 @@
   width: 235px;
 }
 
+.ingredientDiv {
+  width: 100%;
+}
+
 .open ul {
   display: block !important;
 }

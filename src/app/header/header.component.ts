@@ -14,9 +14,4 @@ export class HeaderComponent {
     this.viewChange.emit(view);
   }
 
-	dropdown() {
-		this.isOpen = !this.isOpen;
-		console.log(this.isOpen)
-	}
-
 }
