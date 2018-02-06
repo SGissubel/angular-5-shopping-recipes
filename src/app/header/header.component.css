@@ -3,6 +3,10 @@
   margin-bottom: 2em;
 }
 
+.active a {
+  color: white;
+}
+
 .navbar-nav {
   flex-direction: inherit;
 }
