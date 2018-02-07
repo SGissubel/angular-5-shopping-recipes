@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navCont">
 	<div class="container container-fluid">
 		<div class="navbar-header">
-			<a href="#" class="navbar-brand"> Recipe Book</a>
+			<a routerLink="../" style="cursor: pointer;" class="navbar-brand"> Recipe Book</a>
 		</div>
 
 		<div class="navbar">
@@ -9,26 +9,25 @@
 			<li 
           role="presentation" 
           routerLinkActive="active">
-        <a [routerLink]="['/recipes']">Recipes</a></li>
+        <a style="cursor: pointer;" [routerLink]="['/recipes']">Recipes</a></li>
 			<li 
           role="presentation" 
           routerLinkActive="active">
-        <a [routerLink]="['/shopping-list']">Shopping List</a></li>
-				<!-- <li><a href="#" (click)="changeView('recipe')">Recipes</a></li> -->
-				<!-- <li><a href="#" (click)="changeView('shopping-list')">Shopping List</a></li> -->
+        <a style="cursor: pointer;" [routerLink]="['/shopping-list']">Shopping List</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown" appDropdown>
 					<!-- <div class="dropdown"> -->
 						<a 
+							style="cursor: pointer;"
 							class="dropdown-toggle"
 							role="button" 
-							href="#">Manage 
+							>Manage 
 							<span class="caret"></span>
 						</a>
 						<ul [ngStyle]="{display : isOpen ? 'block' : 'none'}" class="dropdown-menu" role="menu">
-							<li><a href="#">Save Data</a></li>
-							<li><a href="#">Fetch Data</a></li>
+							<li><a style="cursor: pointer;">Save Data</a></li>
+							<li><a style="cursor: pointer;">Fetch Data</a></li>
 						</ul>
 					<!-- </div> -->
 				</li>
