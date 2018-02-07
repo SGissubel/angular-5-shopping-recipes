@@ -32,6 +32,6 @@ export class RecipeService {
   }
 
   getRecipe(id: number) {
-    this.recipes[id];
+    return this.recipes[id];
   }
 }
