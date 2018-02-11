@@ -5,12 +5,23 @@
 		</div>
 
 		<div class="navbar">
-			<ul class="nav navbar-nav navbar-left">
-			<li 
+			<ul class="nav navbar-nav">
+				<li 
+					class="navbar-left" 
+          role="presentation" 
+          routerLinkActive="active">
+        	<a style="cursor: pointer;" [routerLink]="['/signin']">Log In</a></li>
+				<li 
+					class="navbar-left" 
+          role="presentation" 
+          routerLinkActive="active">
+        	<a style="cursor: pointer;" [routerLink]="['/signup']">Sign Up</a></li>
+				<li 
+					class="navbar-left" 
           role="presentation" 
           routerLinkActive="active">
         <a style="cursor: pointer;" [routerLink]="['/recipes']">Recipes</a></li>
-			<li 
+				<li 
           role="presentation" 
           routerLinkActive="active">
         <a style="cursor: pointer;" [routerLink]="['/shopping-list']">Shopping List</a></li>
