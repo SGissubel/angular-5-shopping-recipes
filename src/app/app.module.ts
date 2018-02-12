@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RecipesRoutingModule } from './recipes/recipes-routing.module';
+
 import { RecipesModule } from './recipes/recipes.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { AuthModule } from './auth/auth.module';

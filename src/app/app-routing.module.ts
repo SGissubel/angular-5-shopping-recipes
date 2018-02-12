@@ -3,19 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { RecipesRoutingModule } from './recipes/recipes-routing.module';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { SignupComponent } from './auth/signup/signup.component';
-import { SigninComponent } from './auth/signin/signin.component';
+import { AuthRoutingModule } from './auth/auth-routing.module';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   { path: 'shopping-list', component: ShoppingListComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'signin', component: SigninComponent }
+  
 ]
 @NgModule({
   imports: [
     RouterModule.forRoot(appRoutes),
-    RecipesRoutingModule
+    RecipesRoutingModule,
+    AuthRoutingModule
   ],
   exports: [RouterModule]
 })
