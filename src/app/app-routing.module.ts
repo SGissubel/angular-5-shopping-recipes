@@ -1,24 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
+import { RecipesRoutingModule } from './recipes/recipes-routing.module';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
-import { AuthGuard } from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-  
-  
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent }
 ]
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    RecipesRoutingModule
   ],
   exports: [RouterModule]
 })
