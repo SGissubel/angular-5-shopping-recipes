@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSignIn(form)" form="ngForm">
+<form (ngSubmit)="onSignIn(form)" #form="ngForm">
   <div class="form-group">
     <label for="email">Email</label>
     <input type="email" id="email" name="email" ngModel class="form-control">

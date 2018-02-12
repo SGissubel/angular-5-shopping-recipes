@@ -2,7 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { Response } from '@angular/http';
 
 import { DataStorageService } from '../shared/data-storage.service';
-
+import { AuthService } from '../auth/auth.service';
 
 @Component({
 	selector: 'app-header',
@@ -14,7 +14,8 @@ export class HeaderComponent {
 	isOpen: boolean = false;
   @Output() viewChange = new EventEmitter<string>();
 
-  constructor(private dataStorage: DataStorageService) {}
+  constructor(private dataStorage: DataStorageService,
+              private authService: AuthService) {}
 
   changeView(view: string) {
     this.viewChange.emit(view);
