@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Response } from '@angular/http';
+import { HttpEvent } from '@angular/common/http';
 
 import { DataStorageService } from '../../shared/data-storage.service';
 import { AuthService } from '../../auth/auth.service';
@@ -17,14 +17,11 @@ export class HeaderComponent {
   constructor(private dataStorage: DataStorageService,
               private authService: AuthService) {}
 
-  changeView(view: string) {
-    this.viewChange.emit(view);
-  }
 
   onSaveData() {
     this.dataStorage.storeRecipes()
       .subscribe(
-        (res: Response) => {
+        (res: HttpEvent<Object>) => {
           console.log(res)
         }
     );
