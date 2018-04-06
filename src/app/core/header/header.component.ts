@@ -12,7 +12,6 @@ import { AuthService } from '../../auth/auth.service';
 
 export class HeaderComponent {
 	isOpen: boolean = false;
-  @Output() viewChange = new EventEmitter<string>();
 
   constructor(private dataStorage: DataStorageService,
               private authService: AuthService) {}
