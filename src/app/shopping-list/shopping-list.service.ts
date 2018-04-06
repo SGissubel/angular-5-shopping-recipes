@@ -10,18 +10,20 @@ export class ShoppingListService {
     new Ingredient('BANANAS!', 20)
   ];
 
-  getIngredients() {
-    return this.ingredients.slice();
-  }
+// no longer needed --> replaced with shoppinglist.reducer
+  // getIngredients() {
+  //   return this.ingredients.slice();
+  // }
 
   getIngredient(index: number) {
     return this.ingredients[index];
   }
 
-  onIngredientAdded(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
-    this.ingredientsChanged.next(this.ingredients.slice());
-  }
+// no longer needed --> replaced with shoppinglist.reducer
+  // onIngredientAdded(ingredient: Ingredient) {
+  //   this.ingredients.push(ingredient);
+  //   this.ingredientsChanged.next(this.ingredients.slice());
+  // }
 
   onAddToShoppingList(ingredients: Ingredient[]) {
     // ingredients.map((ing: Ingredient) => {
