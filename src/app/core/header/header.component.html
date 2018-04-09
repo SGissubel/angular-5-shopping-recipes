@@ -6,7 +6,7 @@
 
 		<div class="navbar">
 			<ul class="nav navbar-nav">
-				<ng-template [ngIf]="!authService.isAuthenticated()">
+				<ng-template [ngIf]="!(authState | async).authenticated">
 					<li 
 						class="navbar-left" 
 	          role="presentation" 
@@ -30,7 +30,7 @@
       	
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-			<ng-template [ngIf]="authService.isAuthenticated()">
+			<ng-template [ngIf]="(authState | async).authenticated">
 				<li><a style="cursor: pointer" (click)="onLogout()">Log Out</a></li>
 				<li class="dropdown" appDropdown>
 					<a 
