@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 // import { HttpEvent } from '@angular/common/http';
@@ -23,7 +23,6 @@ export class HeaderComponent implements OnInit {
               private store: Store<fromApp.AppState>) {}
   ngOnInit() {
     this.authState = this.store.select('auth');
-    debugger;
   }
 
   onSaveData() {
@@ -35,12 +34,12 @@ export class HeaderComponent implements OnInit {
     );
   }
 
-  onLogout() {
-    this.authService.logout();
-  }
-
   onFetchData() {
     this.dataStorage.getRecipes();
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 
 }

@@ -11,7 +11,6 @@ const initialState: State = {
 };
 
 export function authReducer(state = initialState, action: AuthActions.AuthActions) {
-debugger;
   switch (action.type) {
     case (AuthActions.SIGNUP):
     case (AuthActions.SIGNIN):
@@ -24,6 +23,11 @@ debugger;
         ...state,
         token: null,
         authenticated: false
+      };
+    case (AuthActions.SET_TOKEN):
+      return {
+        ...state,
+        token: action.payload
       };
       
     default:

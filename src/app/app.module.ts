@@ -29,7 +29,7 @@ import { reducers } from './store/app.reducers';
     ShoppingListModule,
     AuthModule,
     CoreModule,
-    StoreModule.forRoot({reducers})
+    StoreModule.forRoot(reducers)
   ],
   providers: [],
   bootstrap: [AppComponent]
